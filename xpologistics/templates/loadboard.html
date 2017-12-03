@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Freights Available here</title>
+</head>
+<style>
+body {background-color: skyblue;}
+h1   {color: blue;}
+</style>
+<body>
+<form  action="/lbdata" method = "POST" >
+<p> PICKUP POINT </p>
+<select name="pickup_points"  >
+  <option value="{{pickup_point[0]}}" selected>{{pickup_point[0]}}</option>
+  {% for colour in pickup_point[1:] %}
+    <option value="{{colour}}">{{colour}}</option>
+  {% endfor %}
+</select>
+<br>
+<p> DELIVERY POINT </p>
+<select name="drop_point" >
+  <option value="{{drop_point[0]}}" selected>{{drop_point[0]}}</option>
+  {% for colour in drop_point[1:] %}
+    <option value="{{colour}}">{{colour}}</option>
+  {% endfor %}
+</select>
+<br>
+<button type="submit" >GETLOAD BOARDS</button> 
+</form>
+</body>
+</html>
+
+
+
+

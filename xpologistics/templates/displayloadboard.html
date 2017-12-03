@@ -1,0 +1,12 @@
+
+<!doctype html>
+<title>Simple tables</title>
+<style>
+body {background-color: powderblue;}
+h1   {color: yellow;}
+</style>
+<div class=page>
+ {% for table in loaddata %}
+      {{ table|safe }}
+  {% endfor %}
+</div>
