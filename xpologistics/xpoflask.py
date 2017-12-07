@@ -52,8 +52,13 @@ def weatheranalysis():
 def outputweather():
     CITY_fetched=request.form.get('CITY')
     k=Weatherandroadcondition.PLACE[Weatherandroadcondition.PLACE==CITY_fetched]
-    return render_template('output.html',p=k)
-    
+    print (k)
+    return render_template('output.html',p=k.to_html(classes ='k'))
+
+@app.route('/Confirmationbid',methods = ['GET','POST'] )
+def confirmbidding():
+    bidvalue=request.form.get('bidding')
+    return render_template('confirmbidding.html' , confirmation = bidvalue )
 
 
 if __name__=="__main__":
