@@ -25,6 +25,14 @@ h1   {color: blue;}
     <option value="{{colour}}">{{colour}}</option>
   {% endfor %}
 </select>
+<p> MATERIAL TYPE </P>
+<Select name="MATERIALTYPE">
+    <option value="{{MATERIALTYPE[0]}}" selected>{{MATERIALTYPE[0]}}</option>
+  {% for colour in MATERIALTYPE[1:] %}
+    <option value="{{colour}}">{{colour}}</option>
+  {% endfor %}
+</select>
+   
 <br>
 <button type="submit" >GETLOAD BOARDS</button> 
 </form>

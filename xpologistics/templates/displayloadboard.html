@@ -5,8 +5,15 @@
 body {background-color: powderblue;}
 h1   {color: yellow;}
 </style>
+<form  action="/Confirmationbid" method = "POST" >
 <div class=page>
  {% for table in loaddata %}
       {{ table|safe }}
   {% endfor %}
 </div>
+
+<br>
+Bidding Value : <input type="text" name="bidding"><br>
+
+<button >Confirmbidvalue</button> 
+</form>
