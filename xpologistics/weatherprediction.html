@@ -1,0 +1,11 @@
+<form  action="/Weatherdata" method = "POST" >
+<p> PICKUP POINT </p>
+<select name="city"  >
+  <option value="{{city[0]}}" selected>{{city[0]}}</option>
+  {% for colour in city[1:] %}
+    <option value="{{colour}}">{{colour}}</option>
+  {% endfor %}
+</select>
+<br>
+
+<button type="submit" >getmaps</button> 
